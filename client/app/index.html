@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Conversion</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css assets/app.css -->
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <!-- endbuild -->
+
+</head>
+<body ng-app="rbt.conversion" ng-controller="Application">
+<div class="parent">
+  <div class="block" ng-controller="SingleConversion as controller">
+    <form class="form-horizontal" role="form" ng-submit="controller.convert()">
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="from">From</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="from" ng-model="convert.from" data-animation="am-flip-x"
+                 bs-options="currency.sortName as currency.name for currency in currencies"
+                 placeholder="From" bs-typeahead/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="to">To</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="to" ng-model="convert.to" data-animation="am-flip-x"
+                 bs-options="currency.sortName as currency.name for currency in currencies"
+                 placeholder="To" bs-typeahead/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="sum">Sum</label>
+
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="sum" ng-model="convert.sum" placeholder="Sum"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Convert</button>
+        </div>
+      </div>
+    </form>
+
+    <div>
+      <div class="from" ng-bind="conversionResult.From"></div>
+      <div class="to" ng-bind="conversionResult.To"></div>
+      <div class="rate" ng-bind="conversionResult.Rate"></div>
+    </div>
+
+  </div>
+</div>
+<!-- build:js assets/app.js -->
+<script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="../bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+<script src="../bower_components/angularjs-toaster/toaster.js"></script>
+<!-- include: "type": "js", "basePath": "tmp", "files": ["../app/**/*.module.js", "../app/**/*.service.js", "../app/**/*.config.js", "../app/**/*.routes.js", "../app/**/*.constant.js", "../app/**/*.controller.js", "../app/**/*.directive.js", "../app/**/*.run.js", "../app/**/*.filter.js"] -->
+<!-- endbuild -->
+
+</body>
+
+</html>

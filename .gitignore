@@ -1,0 +1,17 @@
+server/.idea/
+server/project/project/
+server/project/target/
+server/resources/assets/
+server/target/
+server/lib_managed/
+server/src_managed/
+server/test-output/
+server/.classpath_nb
+
+client/.idea/
+client/.tmp/
+client/dist/
+client/bower_components/
+client/node_modules/
+
+**/*.iml

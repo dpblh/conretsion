@@ -1,0 +1,16 @@
+{
+  "globalstrict": true,
+  "globals": {
+    "angular": false,
+    "alertify": false,
+    "console": false,
+    "document": false,
+    "require": false,
+    "define": false,
+    "SockJS": false,
+    "Stomp": false,
+    "window": false,
+    "com": false,
+    "Class": false
+  }
+}
