@@ -6,7 +6,7 @@ angular.module('rbt.single-conversion').factory('singleConversion', function($ht
   };
 
   function convert(data) {
-    return $http.post('/convert', data)
+    return $http.post('/convert', data);
   }
 
 });

@@ -11,7 +11,7 @@ angular.module('rbt.single-conversion').controller('SingleConversion', /*@ngInje
     $scope.convert.sum = parseInt($scope.convert.sum);
     singleConversion.convert($scope.convert).then(function(result) {
       $scope.conversionResult = result.data;
-    })
+    });
   }
 
   $scope.currencies = [
@@ -691,6 +691,6 @@ angular.module('rbt.single-conversion').controller('SingleConversion', /*@ngInje
       "sortName": "ZWL",
       "name": "Zimbabwean Dollar"
     }
-  ]
+  ];
 
 });
