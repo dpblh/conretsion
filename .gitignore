@@ -1,7 +1,7 @@
 server/.idea/
 server/project/project/
 server/project/target/
-server/resources/assets/
+server/src/main/resources/assets/
 server/target/
 server/lib_managed/
 server/src_managed/
